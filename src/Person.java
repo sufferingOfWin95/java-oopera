@@ -24,6 +24,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + " / пол: " + gender;
+        return firstName + " " + lastName + " / " + gender;
     }
 }

@@ -14,18 +14,21 @@ public class Actor extends Person{
 
     @Override
     public String toString() {
-        return super.toString() + " рост: " + height;
+        return super.toString() + " (" + height + ")";
     }
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Actor actor = (Actor) o;
-        return height == actor.height;
+        return height == actor.height
+                && Objects.equals(getFirstName(), actor.getFirstName())
+                && Objects.equals(getLastName(), actor.getLastName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(height);
+        return Objects.hash(getFirstName(), getLastName(), height);
     }
 }
