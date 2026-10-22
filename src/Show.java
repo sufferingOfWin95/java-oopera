@@ -37,10 +37,7 @@ public class Show {
                 listOfActors.set(i, newactor);
                 return;
             }
-            System.out.println("Такой актёр не найден!");
         }
+        System.out.println("Такой актёр не найден!");
     }
-
-
-
 }
